@@ -25,3 +25,24 @@
 				$telefono=$_GET['telefono'];
 				$fecha=$_GET['fecha-nac'];
 				$categoria=$_GET['set'];
+                try{
+					// $sql= "update base set nombre = '$nombre', correo = '$email', fecha = '$fecha', premium = '$premium' where id = '$id'";
+					$sql = "update clubDeportivo set nombre= '$nombre', telefono= '$telefono', fecha_nacimiento= '$fecha', categoria= '$categoria' where id like '$id'";
+					$resultado= $mysqli->query($sql);
+					?>
+			<br>
+			<p class="alert alert-primary" role="alert">REGISTRO MODIFICADO</p> 
+			<br>
+		<?php
+				}catch(Exception $e){
+					echo '<p class="alert alert-danger" role="alert">ERROR</p> ';
+				}
+		?>
+	
+			
+				<a href="index.php" class='btn btn-primary'>Regresar</a>
+			<?php
+			
+		?>
+	</body>
+</html>
