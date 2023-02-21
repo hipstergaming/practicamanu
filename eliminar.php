@@ -11,7 +11,26 @@
 		<title>Club Deportivo La Venta</title>
 	</head>
 	<body>
-
+    <?php
+			    require 'conexion.php';
+    
+				$id=$_GET['id'];
+				$sql= "Select $id from clubdeportivo";
+			
+				// Ejecuto la sentencia y guardo el resultado
+				$resultado= $mysqli->query($sql);
+			
+			
+				$sql= "delete from clubdeportivo where id like '$id'";
+				$resultado = $mysqli->query($sql);
+				?>
+			<br>
+			<p class="alert alert-primary" role="alert">REGISTRO ELIMINADO</p> 
+			<br>
+			
+				<a href="index.php" class='btn btn-primary'>Regresar</a>
+			
+		
 
 	</body>
 </html>
