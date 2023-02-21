@@ -31,3 +31,22 @@
 							<input type="date" id="fecha-nac" name="fecha-nac" class="form-control">
 						</div>
 						<div class="form-group">
+                        <label for="set">Categoría: </label>
+							<select name="set" id="set" class="form-control" value=" <?php echo $categoria ?>">
+								<option value="AMATEUR">AMATEUR</option>
+								<option value="PROFESIONAL">PROFESIONAL</option>
+							</select>
+						</div>
+						<div class="form-group">
+						<label>
+							<input type="submit" value="Registrar" class='btn btn-primary'>
+						<label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.4.1.min.js" ></script>
+		<script src="js/bootstrap.min.js" ></script>
+	</body>
+</html>				
